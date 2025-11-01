@@ -1,9 +1,10 @@
 h1 {
-    color : blue;
+    color : rgb(37, 150, 216);
     text-align :center;
 }
 
 body {
+    display: flex;
     font-family: helvetica, Arial, sans-serif;
     justify-content: center;
     align-items: center;
@@ -109,7 +110,7 @@ body {
 .jar-glossy-long {
     background: #FFF;
     height: 25%;
-    width: 5%;
+    width: 30px;
     position: absolute;
     bottom: 20%;
     border-radius : 1rem 1rem 1rem 1rem;
@@ -120,7 +121,7 @@ body {
 .jar-glossy-short {
     background: #FFF;
     height: 5%;
-    width: 5%;
+    width: 30px;
     position: absolute;
     bottom: 50%;
     border-radius : 1rem 1rem 1rem 1rem;
