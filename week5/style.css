@@ -1,17 +1,17 @@
-h1 {
-    color : rgb(37, 150, 216);
-    text-align :center;
+body {
+    font-family : helvetica, arial, sans-serif;
 }
 
-body {
-    display: flex;
-    font-family: helvetica, Arial, sans-serif;
-    justify-content: center;
-    align-items: center;
+#left-container {
+    left: 0px;
+}
+
+#right-container {
+    right: 0px;
 }
 
 .container {
-    background-color: #eee ;
+    background-color: #eee;
     width: 15%;
     top: 0px;
     position: absolute;
@@ -19,30 +19,21 @@ body {
     padding: 10px;
 }
 
-.h1-title {
-    background: #FFF;
-    height: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+h1 {
+    color: #008bdb;
+    text-align: center;
 }
 
-.plant-holder1 {
+.plant-holder{
     position: relative;
     height: 13%;
     left: -10px;
 }
 
-.plant-holder2 {
-    position: relative;
-    height: 13%;
-    right: -10px;
-}
-
-.plant {
+.plant{
     position: absolute;
-    max-width: 150%;
-    max-height: 150%;
+    max-width: 150px;
+    max-height: 150px;
     z-index: 2;
 }
 
@@ -53,12 +44,22 @@ body {
     border-radius: 1rem;
     position: absolute;
     bottom: 0.5%;
-    left:20%;
+    left: 20%;
     opacity: 0.5;
     z-index: 1;
 }
+.jar-top {
+    width: 50%;
+    height: 5%;
+    background: #d1e1df;
+    position: absolute;
+    bottom: 80.5%;
+    left: 25%;
+    opacity: 0.7;
+    z-index: 1;
+}
 
-.jar-bottom{
+.jar-bottom {
     width: 50%;
     height: 1%;
     background: #d1e1df;
@@ -67,7 +68,6 @@ body {
     left: 25%;
     opacity: 0.7;
 }
-
 .dirt {
     width: 60%;
     height: 5%;
@@ -76,35 +76,8 @@ body {
     border-radius: 0 0 1rem 1rem;
     bottom: 1%;
     left: 20%;
-    opacity: 0.8;
-    z-index: -1;
-}
-
-.jar-top {
-    width: 50%;
-    height: 5%;
-    background:#d1e1df ;
-    position: absolute;
-    bottom: 80.5%;
-    left: 25%;
     opacity: 0.7;
-    z-index: 1;
-}
-
-#terrarium {
-    background: #FFF;
-    height: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#left-container {
-    left: 0px;
-}
-
-#right-container {
-    right: 0px;
+    z-index: -1;
 }
 
 .jar-glossy-long {

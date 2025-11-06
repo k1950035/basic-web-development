@@ -1,41 +1,38 @@
-let checkZ = 2;
-function dragElement(terrariumElement) {
-    let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    
+let zIndex = 10;
+let plantDrag = null;
 
-    terrariumElement.onpointerdown = pointerDrag;
-    terrariumElement.ondblclick = elementDoubleClick;
+const plants = document.querySelectorAll(".plant");
+const terrarium = document.getElementById("terrarium");
 
-    function pointerDrag(e) {
-        e.preventDefault();
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onpointermove = elementDrag;
-        document.onpointerup = stopElementDrag;
+plants.forEach(plant => {
+    plant.addEventListener("dragstart", (e) => {
+        plantDrag = e.target;
+        e.dataTransfer.setData("text/plain", e.target.id);
+    });
 
-    }
+    plant.addEventListener("dblclick", () => {
+        zIndex++;
+        plant.style.zIndex = zIndex;
+    });
+});
 
-    function elementDrag(e) {
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        terrariumElement.style.top = (terrariumElement.offsetTop - pos2) + 'px';
-        terrariumElement.style.left = (terrariumElement.offsetLeft - pos1) + 'px';
-    }
+terrarium.addEventListener("dragover", (e) => {
+    e.preventDefault();
+});
 
-    function elementDoubleClick(e) {
-        e.stopPropagation();
-        checkZ += 1;
-        terrariumElement.style.zIndex = checkZ;
-    }
+terrarium.addEventListener("drop", (e) => {
+    e.preventDefault();
 
-    function stopElementDrag() {
-        document.onpointerup = null;
-        document.onpointermove = null;
-        checkZ += 1;
-        terrariumElement.style.zIndex = checkZ;
-    }
-}
-const plants = document.querySelectorAll('.plant');
-plants.forEach(plant => dragElement(plant));
+    const plantId = e.dataTransfer.getData("text/plain");
+    const plant = document.getElementById(plantId);
+
+    terrarium.appendChild(plant);
+
+    const rect = terrarium.getBoundingClientRect();
+    plant.style.position = "absolute";
+    plant.style.left = (e.clientX - rect.left - plant.width / 2) + "px";
+    plant.style.top = (e.clientY - rect.top - plant.height / 2) + "px";
+
+    zIndex++;
+    plant.style.zIndex = zIndex;
+});
