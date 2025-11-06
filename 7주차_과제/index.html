@@ -15,14 +15,23 @@
           <h1>&nbsp;Typing game !</h1>
         </div>
       </div>
-      <p>Pratice your typing skills with a quotes. Click **start** to begin!</p>
+      <p>Practice your typing skills with quotes. Click **start** to begin!</p>
       <p id="quote"></p>
       <p id="message"></p>
       <div>
         <input type="text" aira-label="current word" id="typed-value" />
         <button type="button" id="start">Start</button>
       </div>
-      <script src="script.js"></script>
     </div>
+    <div id="result-modal" class="modal">
+      <div class="modal-content">
+        <h2>타이핑 결과</h2>
+        <p id="result-time"></p>
+        <p id="best-time"></p>
+        <button id="close-modal">확인</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
