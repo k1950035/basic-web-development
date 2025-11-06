@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "extension",
+  "version": "1.0",
+  "description": "extension sample",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "images/plants-people.png",
+      "48": "images/plants-people.png",
+      "128": "images/plants-people.png"
+    }
+  },
+  "icons": {
+    "16": "images/plants-people.png",
+    "48": "images/plants-people.png",
+    "128": "images/plants-people.png"
+  }
+}
