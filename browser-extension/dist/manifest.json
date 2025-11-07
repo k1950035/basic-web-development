@@ -1,19 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "extension",
-  "version": "1.0",
-  "description": "extension sample",
-  "action": {
-    "default_popup": "index.html",
-    "default_icon": {
-      "16": "images/plants-people.png",
-      "48": "images/plants-people.png",
-      "128": "images/plants-people.png"
-    }
+  "name": "My Carbon Trigger",
+  "version": "0.1.0",
+  "host_permissions": ["https://api.electricitymaps.com/*"],
+  "permissions": ["storage"],
+  "background": {
+    "service_worker": "background.js"
   },
-  "icons": {
-    "16": "images/plants-people.png",
-    "48": "images/plants-people.png",
-    "128": "images/plants-people.png"
+  "action": {
+    "default_popup": "index.html"
   }
 }

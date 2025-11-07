@@ -193,3 +193,39 @@ input {
     }
   }
 }
+.result,
+.loading,
+.errors,
+.clear-btn {
+  display: none;
+}
+.result-container {
+  display: none;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-container {
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  text-align: center;
+}
+
+.clear-btn {
+  background-color: rgb(27, 101, 238);
+  color: white;
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 8px;
+}
