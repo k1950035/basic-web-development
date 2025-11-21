@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "명언 출력 펫",
+  "version": "1.0",
+  "description": "명언을 출력하는 귀여운 펫입니다.",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "16": "/assets/pet.png",
+    "48": "/assets/pet.png",
+    "128": "/assets/pet.png"
+  }
+}

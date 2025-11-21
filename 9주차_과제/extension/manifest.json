@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "browser-pet",
+  "version": "1.0",
+  "description": "펫을 키울 수 있는 브라우저 확장 프로그램",
+  "permissions": ["storage", "tabs", "activeTab", "scripting"],
+  "host_permissions": ["https://picsum.photos/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "assets/pet.png",
+      "48": "assets/pet.png",
+      "128": "assets/pet.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/content-script.js"],
+      "css": ["content/content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
