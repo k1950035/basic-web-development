@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Gyeombalbal";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/insungitCutelivelyjisu.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+
+/* (선택 사항) body에 기본 폰트를 적용하여 전체 UI에 반영 */
+body {
+  font-family: "Gyeombalbal", sans-serif;
+}
