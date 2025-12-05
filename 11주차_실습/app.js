@@ -267,7 +267,6 @@ function createHero() {
 
 function createSupportShips() {
   supportShips = [];
-]
   const left = new SupportShip(
     hero.x - 120,
     hero.y + 30
